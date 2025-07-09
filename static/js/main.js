@@ -1,6 +1,6 @@
 // Configuración de animaciones y funcionalidades
+// Se eliminó el efecto de máquina de escribir para el título principal (julio 2025)
 document.addEventListener('DOMContentLoaded', function() {
-    
     // Animación de aparición de elementos al hacer scroll
     const observerOptions = {
         threshold: 0.1,
@@ -157,25 +157,6 @@ document.addEventListener('DOMContentLoaded', function() {
         progressObserver.observe(bar);
     });
 
-    // Efecto de escritura en el título principal
-    const heroTitle = document.querySelector('.hero-title');
-    if (heroTitle) {
-        const text = heroTitle.innerHTML;
-        heroTitle.innerHTML = '';
-        heroTitle.style.opacity = '1';
-        
-        let i = 0;
-        const typeWriter = () => {
-            if (i < text.length) {
-                heroTitle.innerHTML += text.charAt(i);
-                i++;
-                setTimeout(typeWriter, 50);
-            }
-        };
-        
-        setTimeout(typeWriter, 1000);
-    }
-
     // Efecto de partículas de fondo (simulado con CSS)
     const heroSection = document.querySelector('.hero');
     if (heroSection) {
@@ -199,7 +180,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Smooth scroll para el botón de "En Desarrollo"
+    // Smooth scroll para el botón de "Under Construction"
     const heroBadge = document.querySelector('.hero-badge');
     if (heroBadge) {
         heroBadge.addEventListener('click', function() {
@@ -228,14 +209,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Consola de bienvenida
     console.log(`
-    🚀 Viamind Blog - Tecnología, IA y Tiempos Modernos
+    🚀 Viamind Blog - Technology, AI & Modern Times
     
-    ¡Bienvenido al futuro del blogging tecnológico!
+    Welcome to the future of tech blogging!
     
-    Estamos construyendo algo increíble aquí.
-    Mantente atento para más actualizaciones.
+    We are building something amazing here.
+    Stay tuned for more updates.
     
-    - El equipo de Viamind
+    - The Viamind Team
     `);
 });
 
